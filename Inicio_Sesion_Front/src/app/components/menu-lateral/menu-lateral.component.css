@@ -1,0 +1,179 @@
+/* Contenedor del logo */
+.logo-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1001; /* Un valor superior al del menú lateral para que se quede encima */
+}
+
+.logo {
+    width: 350px; /* Ajusta el tamaño del logo según lo necesites */
+    height: auto;
+}
+
+/* Botón hamburguesa siempre visible */
+.hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 100px;
+    left: 0px; /* Ajusta la posición según lo necesites para que no se sobreponga al logo */
+    z-index: 1000;
+}
+
+.hamburger-btn mat-icon {
+    font-size: 30px; /* Ajusta este valor según lo grande que lo quieras */
+    width: 48px;
+    height: 48px;
+}
+
+/* Color negro cuando el menú está oculto */
+.hamburger-btn.closed mat-icon {
+    color: #004e7c; /* Azul oscuro */
+}
+
+/* Color blanco cuando el menú está visible */
+.hamburger-btn.open mat-icon {
+    color: white;
+}
+
+nav ul li a mat-icon,
+.dropdown-toggle mat-icon,
+.dropdown-menu li a mat-icon,
+.bottom-options ul li a mat-icon {
+    font-size: 25px; /* Ajusta el tamaño según lo necesites */
+    
+}
+
+/* Contenedor del menú lateral */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    background-color: #024d64; /* Azul principal */
+    color: #fff;
+    padding-top: 150px;
+    z-index: 999;
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    pointer-events: auto;
+}
+
+/* Cuando está oculto */
+.menu-container.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Estilos del menú */
+nav ul {
+    list-style-type: none; /* Elimina los "puntitos" */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px; /* Aumenta el tamaño del texto aquí */
+}
+
+nav ul li a.active {
+    background-color: #03637e; /* Azul más claro */
+}
+
+/* Dropdown estilo hover */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown .arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #045c77; /* Azul medio */
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1002;
+}
+
+.dropdown-menu li a {
+    padding: 5px 20px;
+    color: white;
+    font-size: 18px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #03637e; /* Azul más claro */
+}
+
+/* Contenedor de las opciones inferiores */
+.bottom-options {
+    position: absolute;
+    bottom: 20px; /* Ajusta este valor según lo necesites */
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.bottom-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-options ul li {
+    padding: 10px 0;
+}
+
+.bottom-options ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px; /* Tamaño de fuente de las opciones */
+}
+
+.bottom-options ul li a:hover {
+    background-color: #03637e; /* Azul más claro */
+}
+
+.bottom-options ul li a.logout:hover {
+    background-color: #0277bd; /* Azul más fuerte para cerrar sesión */
+}
+
+

@@ -1,0 +1,75 @@
+<!-- Logo de la empresa -->
+<div class="logo-container">
+  <a [routerLink]="['/usuario']">
+    <img src="assets/imagenes/logo-login.jpg" alt="Logo de la empresa" class="logo" style="cursor: pointer;">
+  </a>
+</div>
+  
+<!-- Botón de hamburguesa SIEMPRE visible -->
+<button (click)="toggleMenu()" class="hamburger-btn" [class.open]="isMenuVisible">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+  <!-- Menú lateral -->
+  <div class="menu-container" [class.hidden]="!isMenuVisible">
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/usuario" routerLinkActive="active">
+            <mat-icon>person</mat-icon>
+            Usuarios
+          </a>
+        </li>
+        <li>
+          <a routerLink="/administrador" routerLinkActive="active">
+            <mat-icon>admin_panel_settings</mat-icon>
+            Administradores
+          </a>
+        </li>
+        <li>
+            <a routerLink="/sistema" routerLinkActive="active">
+              <mat-icon>developer_board</mat-icon>
+              Sistemas
+            </a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle">
+                <mat-icon>manage_history</mat-icon>
+                Historial de Eventos
+              </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a routerLink="/log_api" routerLinkActive="active">
+                  <mat-icon>api</mat-icon>
+                  Logs API
+                </a>
+              </li>
+              <li>
+                <a routerLink="/log_sistema" routerLinkActive="active">
+                  <mat-icon>memory</mat-icon>
+                  Logs Sistema
+                </a>
+              </li>
+            </ul>
+          </li>     
+      </ul>
+
+      <!--  Menu Inferior-->
+      <div class="bottom-options">
+        <ul>
+          <li>
+            <a routerLink="/configuracion" routerLinkActive="active">
+              <mat-icon>settings</mat-icon>
+              Configuraciones
+            </a>
+          </li>
+          <li>
+            <a (click)="logout()" class="logout">
+              <mat-icon>exit_to_app</mat-icon>
+              Cerrar sesión
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>

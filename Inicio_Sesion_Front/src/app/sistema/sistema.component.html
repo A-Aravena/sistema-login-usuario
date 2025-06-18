@@ -1,0 +1,299 @@
+<div class="container">
+  <div class="main-layout">
+    <app-menu-lateral
+      (menuToggle)="onMenuToggle($event)"
+      [class.hidden]="!menuVisible"
+    ></app-menu-lateral>
+
+    <div class="contenido" [class.expandido]="!menuVisible">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="60"></mat-spinner>
+      </div>
+
+      <div class="contenedor-filtros mat-elevation-z2">
+        <div class="titulo-contenedor">
+          <h2 class="titulo-estilizado mat-title">Sistemas</h2>
+        </div>
+
+        <div class="filtros-fondo" [class.expandido]="!menuVisible">
+          <div class="filtros">
+            <h3>Filtros de Búsqueda</h3>
+            <div class="filtros-contenido">
+              <!-- Primera fila -->
+              <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput [(ngModel)]="nombre" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Sistema Key</mat-label>
+                <input matInput [(ngModel)]="sistema_key" />
+              </mat-form-field>
+
+
+
+             <mat-form-field appearance="fill">
+  <mat-label>Fecha Inicio</mat-label>
+  <input
+  #fechaInicioInput
+  matInput
+  [matDatepicker]="pickerInicio"
+  [(ngModel)]="fechaInicio"
+  name="fechaInicio"
+  #fechaInicioNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+  <mat-datepicker #pickerInicio></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Fecha Fin</mat-label>
+<input
+  #fechaFinInput
+  matInput
+  [matDatepicker]="pickerFin"
+  [(ngModel)]="fechaFin"
+  name="fechaFin"
+  #fechaFinNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+  <mat-datepicker #pickerFin></mat-datepicker>
+</mat-form-field>
+
+
+
+
+
+              <mat-form-field appearance="fill">
+                <mat-label>Estado</mat-label>
+                <mat-select [(ngModel)]="sistema_estado">
+                  <mat-option value="todos">Todos</mat-option>
+                  <mat-option value="1">Activo</mat-option>
+                  <mat-option value="0">Desactivado</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <!-- Segunda fila -->
+              <!-- Botones dentro del grid -->
+              <div
+                class="botones-filtros"
+                style="grid-column: span 1; justify-content: flex-end"
+              >
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="aplicarFiltros(1)"
+                >
+                  Buscar
+                </button>
+
+                <button mat-raised-button color="accent" (click)="exportar()">
+                  Exportar
+                </button>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="limpiarFiltros()"
+                >
+                  Limpiar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-boton-agregar">
+          <button mat-raised-button color="primary" (click)="abrirCrear()">
+            Agregar Sistemas
+          </button>
+        </div>
+
+        <div class="tabla-fondo" [class.expandido]="!menuVisible">
+          <table mat-table [dataSource]="sistemas" matSort>
+            <!-- Columna Nombre -->
+            <ng-container matColumnDef="sistema_nombre">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+              <td mat-cell *matCellDef="let sistema">
+                {{ sistema.sistema_nombre || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna sistema key -->
+            <ng-container matColumnDef="sistema_key">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Sistema Key
+              </th>
+              <td mat-cell *matCellDef="let sistema">
+                {{ sistema.sistema_key || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna sistema estado -->
+            <ng-container matColumnDef="sistema_estado">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Estado</th>
+              <td mat-cell *matCellDef="let sistema">
+                <mat-slide-toggle
+                  [checked]="sistema.sistema_estado == 1"
+                  (change)="cambiarEstado($event, sistema)"
+                  color="primary"
+                >
+                  <span style="margin-left: 12px">
+                    {{
+                      sistema.sistema_estado == 1 ? "Activado" : "Desactivado"
+                    }}
+                  </span>
+                </mat-slide-toggle>
+              </td>
+            </ng-container>
+
+            <!-- Columna Fecha Registro -->
+            <ng-container matColumnDef="created_at">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Fecha Registro
+              </th>
+              <td mat-cell *matCellDef="let sistema">
+                {{ sistema.created_at | date : "dd-MM-yyyy" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna Acciones -->
+            <ng-container matColumnDef="acciones">
+              <th mat-header-cell *matHeaderCellDef>Acciones</th>
+              <td mat-cell *matCellDef="let sistema">
+                <div class="acciones-botones">
+                  <button
+                    mat-icon-button
+                    matTooltip="Editar"
+                    (click)="abrirEdit(sistema.sistema_id)"
+                  >
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button
+                    mat-icon-button
+                    matTooltip="Borrar"
+                    (click)="borrarSistema(sistema.sistema_id)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </td>
+            </ng-container>
+
+            <!-- Header y filas -->
+            <thead>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            </thead>
+            <tbody>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </tbody>
+          </table>
+
+          <!-- Paginador de Angular Material -->
+          <mat-paginator
+            [length]="totalItems"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="[1, 5, 10, 20, 30]"
+            [showFirstLastButtons]="true"
+            (page)="onPageChange($event)"
+          >
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Popup modal -->
+<div *ngIf="mostrarPopup" class="modal" 
+(pointerup)="onModalPointerUp($event)">
+  <div
+    class="popup-container modal-edit-admin"
+    (pointerdown)="onInsidePointerDown($event)"
+    (click)="$event.stopPropagation()"
+  >
+    <h2 class="popup-header mat-title">
+      {{ modo === "crear" ? "Agregar Sistema" : "Editar Sistema" }}
+    </h2>
+
+    <div class="popup-content">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="40"></mat-spinner>
+      </div>
+
+      <form #adminForm="ngForm">
+        <div class="campos-edicion">
+          <mat-form-field appearance="fill" class="full-width input-claro">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              [(ngModel)]="formularioEdit.nombre"
+              name="nombres"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field
+            *ngIf="modo === 'editar'"
+            appearance="fill"
+            class="full-width"
+          >
+            <mat-label>Sistema Key</mat-label>
+            <input
+              matInput
+              [(ngModel)]="formularioEdit.sistema_key"
+              name="sistema_key"
+              [required]="true"
+              #sistemaKeyInput="ngModel"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              type="button"
+              (click)="generarSistemaKey()"
+              matTooltip="Generar clave aleatoria"
+            >
+              <mat-icon>autorenew</mat-icon>
+            </button>
+            <mat-error
+              *ngIf="sistemaKeyInput.invalid && sistemaKeyInput.touched"
+            >
+              El campo sistemaKey es requerido.
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Estado</mat-label>
+            <mat-select
+              [(ngModel)]="formularioEdit.sistema_estado"
+              name="sistema_estado"
+              required
+            >
+              <mat-option [value]="1">Activado</mat-option>
+              <mat-option [value]="0">Desactivado</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </form>
+
+      <div class="popup-actions">
+        <button
+          mat-raised-button
+          color="warn"
+          [disabled]="cargando"
+          (click)="cerrarPopupEdit()"
+        >
+          Cancelar
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="cargando || adminForm.invalid"
+          (click)="modo === 'crear' ? crearSistema() : editarSistema()"
+        >
+          {{ modo === "crear" ? "Crear" : "Actualizar" }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

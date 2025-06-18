@@ -1,0 +1,54 @@
+<div class="login-container">
+    <!-- Sección de la imagen -->
+    <div class="image-section">
+      <img src="assets/imagenes/login_fondo.jpg" alt="Imagen de inicio de sesión">
+    </div>
+  
+    <!-- Sección del formulario -->
+    <div class="login-box">
+      <!-- Imagen del logo -->
+      <div class="logo-container">
+        <img src="assets/imagenes/logo-login.jpg" alt="Logo Emach Administración" class="logo">
+      </div>
+      <h1>Restaurar Contraseña</h1>
+      <form [formGroup]="form" (ngSubmit)="restaurarContrasena()">
+        <p class="subtitle">Atencion !:
+          La nueva coontraseña debe tener al menos 8 
+            digitos, mayusculas, miunsculas y algun 
+            tipo de caracter especial ejemplo:( "#$!%&=?").</p><br>
+            
+              <div class="input-group">
+                <input
+                  [type]="mostrarPassword ? 'text' : 'password'"
+                  placeholder=" "
+                  formControlName="password"
+                  required
+                />
+                <label>Contraseña</label>
+                <button mat-icon-button class="toggle-btn" type="button" (click)="mostrarPassword = !mostrarPassword">
+                  <mat-icon>{{ mostrarPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+              </div>
+            
+              <div class="input-group">
+                <input
+                  [type]="mostrarRepetir ? 'text' : 'password'"
+                  placeholder=" "
+                  formControlName="repetir"
+                  required
+                />
+                <label>Repetir contraseña</label>
+                <button mat-icon-button class="toggle-btn" type="button" (click)="mostrarRepetir = !mostrarRepetir">
+                  <mat-icon>{{ mostrarRepetir ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+              </div>
+            
+          
+           
+        <div class="button-group">
+          <button mat-raised-button color="primary" type="submit">Restaurar contraseña</button>
+        </div>
+
+      </form>
+    </div>
+  </div>

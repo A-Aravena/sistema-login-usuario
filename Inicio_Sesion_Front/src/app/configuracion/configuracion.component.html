@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="main-layout">
+    <app-menu-lateral
+      (menuToggle)="onMenuToggle($event)"
+      [class.hidden]="!menuVisible"
+    ></app-menu-lateral>
+
+    <div class="contenido" [class.expandido]="!menuVisible">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="60"></mat-spinner>
+      </div>
+
+      <div class="contenedor-configuracion mat-elevation-z2">
+        <div class="titulo-contenedor">
+          <h2 class="titulo-estilizado mat-title">Configuraciones</h2>
+        </div>
+
+        <div class="configuracion-fondo" [class.expandido]="!menuVisible">
+          <h3>LOG API</h3>
+          <form class="configuracion-form">
+            <!-- Registros activados -->
+            <div class="campo-horizontal">
+              <label class="etiqueta" for="registrosActivadosToggle"
+                >Registros activados:</label
+              >
+              <mat-slide-toggle
+                id="registrosActivadosToggle"
+                [checked]="registrosActivados"
+                (change)="registrosActivados = $event.checked"
+                color="primary"
+              >
+                <span style="margin-left: 12px">
+                  {{ registrosActivados ? "Activado" : "Desactivado" }}
+                </span>
+              </mat-slide-toggle>
+            </div>
+
+            <!-- Nivel de registros -->
+            <div
+              class="campo-horizontal"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 20px;
+              "
+            >
+              <label class="etiqueta" for="nivelRegistros"
+                >Nivel de registros:</label
+              >
+              <mat-form-field
+                appearance="fill"
+                class="campo-select"
+                style="flex: none"
+              >
+                <mat-select id="nivelRegistros" [(value)]="nivelRegistros">
+                  <mat-option [value]="0">0</mat-option>
+                  <mat-option [value]="1">1</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <!-- Mensaje dinámico -->
+              <small style="color: gray; font-size: 0.8rem">
+                <ng-container *ngIf="nivelRegistros === 0">
+                  * No se registrará query realizada.</ng-container
+                >
+                <ng-container *ngIf="nivelRegistros === 1">
+                  * Se registrará query realizada.</ng-container
+                >
+              </small>
+            </div>
+            <!-- Tiempo de retención -->
+            <div class="campo-horizontal">
+              <label class="etiqueta" for="tiempoRetencion"
+                >Tiempo de retención:</label
+              >
+              <mat-form-field appearance="fill" class="campo-input-pequeno">
+                <input
+      matInput
+      id="tiempoRetencion"
+      type="number"
+      min="1"
+      
+      name="tiempoRetencion"
+      [(ngModel)]="tiempoRetencion"
+      #retencionInput="ngModel"
+    />
+              </mat-form-field>
+              <span class="unidad">Días.</span>
+            </div>
+
+            <!-- Botón guardar -->
+            <div class="boton-guardar">
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="guardarConfiguracion()"
+              >
+                Guardar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

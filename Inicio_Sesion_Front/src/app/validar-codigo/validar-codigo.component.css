@@ -1,0 +1,141 @@
+/* Aplicar la fuente a todo el sitio */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contenedor principal en fila */
+.validar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #062c3b;
+}
+
+/* Sección de la imagen */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/assets/imagenes/login_fondo.jpg');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.image-section img {
+    display: none;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+/* Sección del formulario */
+.validar-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 350px;
+    height: auto;
+    margin: 0 25%;
+    border: 1px solid #e0e0e0;
+}
+
+/* Títulos del formulario */
+h1 {
+    color: #062c3b;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Estilo de los input (campos de texto) */
+.input-group {
+    margin-bottom: 30px;
+    position: relative; /* Asegura que el label se posicione sobre el input */
+}
+
+/* Etiquetas */
+label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Para que no interfiera con el clic del usuario */
+    transform-origin: top left;
+    font-family: 'Roboto', sans-serif; /* Asegúrate de que el label use la fuente */
+}
+
+/* Estilo de los inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    padding-left: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Roboto', sans-serif; /* Asegúrate de que los inputs usen la fuente */
+}
+
+/* Estilo cuando el campo recibe el foco */
+input[type="text"]:focus {
+    border-color: #062c3b;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(6, 44, 59, 0.5);
+}
+
+/* Estilo de animación flotante de la etiqueta */
+input[type="text"]:focus + label,
+input[type="text"]:not(:placeholder-shown) + label {
+    top: -18px;
+    left: 12px;
+    font-size: 12px;
+    color: #062c3b;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #062c3b; /* Fondo oscuro, color corporativo */
+    color: #fff; /* Texto blanco */
+    font-size: 16px;
+    font-weight: 600; /* Negrita para mayor énfasis */
+    padding: 12px 20px;
+    border-radius: 6px; /* Bordes redondeados */
+    border: 1px solid #062c3b; /* Borde del mismo color que el fondo */
+    width: 100%; /* Asegura que el botón tenga todo el ancho disponible */
+    cursor: pointer; /* Puntero de mano para indicar interactividad */
+    transition: all 0.3s ease; /* Transición suave para efectos hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para resaltar el botón */
+}
+
+/* Efecto cuando el cursor está sobre el botón */
+button:hover {
+    background-color: #024d64; /* Color ligeramente más claro al pasar el ratón */
+    border-color: #024d64; /* Cambio de color en el borde */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Estilo para el texto del botón (puedes ajustarlo según sea necesario) */
+button:focus {
+    outline: none; /* Elimina el borde de foco predeterminado */
+    box-shadow: 0px 0px 5px rgba(6, 44, 59, 0.5); /* Añadir sombra sutil en foco */
+}

@@ -1,0 +1,184 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contenedor principal en fila */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #062c3b;
+}
+
+/* Sección de la imagen */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/assets/imagenes/login_fondo.jpg');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.image-section img {
+    display: none;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+/* Sección del formulario */
+.login-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 500px; 
+    max-width: 90%; 
+    height: auto;
+    margin: 0 21.1%; 
+    border: 1px solid #e0e0e0;
+}
+
+/* Títulos del formulario */
+h1 {
+    color: #062c3b;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Estilo de los input (campos de texto) */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Etiquetas */
+label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Para que no interfiera con el clic del usuario */
+    transform-origin: top left;
+    font-family: 'Roboto', sans-serif; /* Asegúrate de que el label use la fuente */
+}
+
+/* Estilo de los inputs usando Bootstrap */
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    padding-left: 12px;
+    padding-right: 40px; /* espacio para el icono a la derecha */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Posicionamiento del icono dentro del input-group */
+.toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background: none !important;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #333;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 24px;   /* Forzamos tamaño del botón */
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    z-index: 2; /* Que quede encima */
+  }
+
+/* Tamaño del icono de visibilidad */
+.toggle-btn mat-icon {
+    font-size: 20px;
+    line-height: 1;
+}
+.toggle-btn:focus,
+.toggle-btn:hover,
+.toggle-btn:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+/* Estilo cuando el campo recibe el foco */
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: #062c3b;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(6, 44, 59, 0.5);
+}
+
+/* Estilo de animación flotante de la etiqueta */
+input[type="password"]:focus + label,
+input[type="password"]:not(:placeholder-shown) + label,
+input[type="text"]:focus + label,
+input[type="text"]:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 8px;
+    font-size: 12px;
+    color: #062c3b;
+    background: white;
+    padding: 0 4px;
+}
+
+/* Estilo del botón */
+button[type="submit"] {
+    background-color: #062c3b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: 1px solid #062c3b;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+
+/* Efecto cuando el cursor está sobre el botón */
+button:hover {
+    background-color: #024d64; /* Color ligeramente más claro al pasar el ratón */
+    border-color: #024d64; /* Cambio de color en el borde */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+button:focus {
+    outline: none; 
+    box-shadow: 0px 0px 5px rgba(6, 44, 59, 0.5); 
+}
+
+

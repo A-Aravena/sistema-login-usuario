@@ -1,0 +1,313 @@
+<div class="container">
+  <div class="main-layout">
+    <app-menu-lateral
+      (menuToggle)="onMenuToggle($event)"
+      [class.hidden]="!menuVisible"
+    ></app-menu-lateral>
+
+    <div class="contenido" [class.expandido]="!menuVisible">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="60"></mat-spinner>
+      </div>
+
+      <div class="contenedor-filtros mat-elevation-z2">
+        <div class="titulo-contenedor">
+          <div class="titulo-principal">Historial de Eventos</div>
+          <div class="subtitulo">Log API</div>
+        </div>
+
+        <div class="filtros-fondo" [class.expandido]="!menuVisible">
+          <div class="filtros">
+            <h3>Filtros de Búsqueda</h3>
+            <div class="filtros-contenido">
+              <!-- Primera fila -->
+              <mat-form-field appearance="fill">
+                <mat-label>Metodo</mat-label>
+                <input matInput [(ngModel)]="metodo" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Url</mat-label>
+                <input matInput [(ngModel)]="url" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Tipo Respuesta</mat-label>
+                <input matInput [(ngModel)]="tipoRespuesta" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Tiempo Ejecución</mat-label>
+                <input matInput [(ngModel)]="tiempoEjecucion" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Param Entrada</mat-label>
+                <input matInput [(ngModel)]="paramEntrada" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Param Salida</mat-label>
+                <input matInput [(ngModel)]="paramSalida" />
+              </mat-form-field>
+
+              <!-- Segunda fila -->
+
+              <mat-form-field appearance="fill">
+                <mat-label>Query</mat-label>
+                <input matInput [(ngModel)]="query" />
+              </mat-form-field>
+
+             <mat-form-field appearance="fill">
+  <mat-label>Fecha Inicio</mat-label>
+  <input
+  #fechaInicioInput
+  matInput
+  [matDatepicker]="pickerInicio"
+  [(ngModel)]="fechaInicio"
+  name="fechaInicio"
+  #fechaInicioNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+  <mat-datepicker #pickerInicio></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Fecha Fin</mat-label>
+<input
+  #fechaFinInput
+  matInput
+  [matDatepicker]="pickerFin"
+  [(ngModel)]="fechaFin"
+  name="fechaFin"
+  #fechaFinNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+  <mat-datepicker #pickerFin></mat-datepicker>
+</mat-form-field>
+
+              <!-- Botones dentro del grid -->
+              <div
+                class="botones-filtros"
+                style="grid-column: span 1; justify-content: start"
+              >
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="aplicarFiltros(1)"
+                >
+                  Buscar
+                </button>
+
+                <button mat-raised-button color="accent" (click)="exportar()">
+                  Exportar
+                </button>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="limpiarFiltros()"
+                >
+                  Limpiar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-boton-agregar">
+          <button mat-raised-button color="primary" (click)="borrarRegistros()">
+            Limpiar Registros
+          </button>
+        </div>
+
+        <div class="tabla-fondo" [class.expandido]="!menuVisible">
+          <table mat-table [dataSource]="LogsApi" matSort>
+            <!-- Columna metodo -->
+            <ng-container matColumnDef="log_api_metodo">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Metodo</th>
+              <td mat-cell *matCellDef="let logApi">
+                {{ logApi.log_api_metodo || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna url -->
+            <ng-container matColumnDef="log_api_url">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Url</th>
+              <td mat-cell *matCellDef="let logApi">
+                {{ logApi.log_api_url || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna tipo respuesta -->
+            <ng-container matColumnDef="log_api_tipo_respuesta">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Tipo Respuesta
+              </th>
+              <td mat-cell *matCellDef="let logApi">
+                {{ logApi.log_api_tipo_respuesta || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna tiempo ejecucion -->
+            <ng-container matColumnDef="log_api_tiempo_ejecucion">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Tiempo ejecución
+              </th>
+              <td mat-cell *matCellDef="let logApi">
+                {{ truncate(logApi.log_api_tiempo_ejecucion) }} ms.
+              </td>
+            </ng-container>
+
+            <!-- Columna Fecha Registro -->
+            <ng-container matColumnDef="log_api_fecha">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Fecha Registro
+              </th>
+              <td mat-cell *matCellDef="let logApi">
+                {{ logApi.log_api_fecha | date : "dd-MM-yyyy" }}
+              </td>
+            </ng-container>
+            <!-- Columna param entrada -->
+            <ng-container matColumnDef="log_api_parametros_entrada">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Param. entrada
+              </th>
+              <td mat-cell *matCellDef="let logApi">
+                {{ logApi.log_api_parametros_entrada | truncate : 50 }}
+              </td>
+            </ng-container>
+
+            <!-- Columna param salida -->
+            <ng-container matColumnDef="log_api_parametros_salida">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Param.salida
+              </th>
+              <td mat-cell *matCellDef="let logApi">
+                <div style="white-space: normal; word-break: break-word">
+                  {{ logApi.log_api_parametros_salida | truncate : 50 }}
+                </div>
+              </td>
+            </ng-container>
+            <!-- Columna query -->
+            <ng-container matColumnDef="log_api_query">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Query</th>
+              <td mat-cell *matCellDef="let logApi">
+                {{ logApi.log_api_query | truncate : 30 }}
+              </td>
+            </ng-container>
+
+            <!-- Columna Acciones -->
+            <ng-container matColumnDef="acciones">
+              <th mat-header-cell *matHeaderCellDef>Acciones</th>
+              <td mat-cell *matCellDef="let admin">
+                <div class="acciones-botones">
+                  <!-- Nuevo botón "ver" -->
+                  <button
+                    mat-icon-button
+                    matTooltip="Ver Registro"
+                    (click)="verLogApi(admin)"
+                  >
+                    <mat-icon>visibility</mat-icon>
+                  </button>
+                </div>
+              </td>
+            </ng-container>
+
+            <!-- Header y filas -->
+            <thead>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            </thead>
+            <tbody>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </tbody>
+          </table>
+
+          <!-- Paginador de Angular Material -->
+          <mat-paginator
+            [length]="totalItems"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="[1, 5, 10, 20, 30]"
+            [showFirstLastButtons]="true"
+            (page)="onPageChange($event)"
+          >
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Popup modal -->
+<div *ngIf="mostrarPopup" class="modal" 
+ (pointerup)="onModalPointerUp($event)">
+  <div
+    class="popup-container modal-edit-admin"
+    (pointerdown)="onInsidePointerDown($event)"
+    (click)="$event.stopPropagation()"
+  >
+    <h2 class="popup-header mat-title">Detalle Log API</h2>
+
+    <div class="popup-content">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="40"></mat-spinner>
+      </div>
+
+      <div class="campos-edicion">
+        <div class="inline-label-value">
+          <strong>Método:</strong>
+          <span>{{ logSeleccionado?.metodo }}</span>
+        </div>
+
+        <div class="inline-label-value">
+          <strong>URL:</strong>
+          <p>{{ logSeleccionado?.url }}</p>
+        </div>
+
+        <div class="inline-label-value">
+          <strong>Tipo Respuesta:</strong>
+          <p>{{ logSeleccionado?.tipo_respuesta }}</p>
+        </div>
+
+        <div class="inline-label-value">
+          <strong>Tiempo de Ejecución:</strong>
+          <p>{{ logSeleccionado?.tiempo_ejecucion }}</p>
+          ms.
+        </div>
+
+        <div class="inline-label-value">
+          <strong>Fecha:</strong>
+          <p>{{ logSeleccionado?.fecha }}</p>
+        </div>
+
+        <div>
+          <strong>Parámetros de Entrada:</strong>
+          <textarea readonly class="scroll-textarea">{{
+            logSeleccionado?.parametros_entrada
+          }}</textarea>
+        </div>
+
+        <div>
+          <strong>Parámetros de Salida:</strong>
+          <textarea readonly class="scroll-textarea">{{
+            logSeleccionado?.parametros_salida
+          }}</textarea>
+        </div>
+
+        <div>
+          <strong>Query:</strong>
+          <textarea readonly class="scroll-textarea">{{
+            logSeleccionado?.query
+          }}</textarea>
+        </div>
+      </div>
+
+      <div class="popup-actions">
+        <button mat-raised-button color="primary" (click)="cerrarPopup()">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

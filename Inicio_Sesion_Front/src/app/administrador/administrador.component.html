@@ -1,0 +1,317 @@
+<div class="container">
+  <div class="main-layout">
+    <app-menu-lateral
+      (menuToggle)="onMenuToggle($event)"
+      [class.hidden]="!menuVisible"
+    ></app-menu-lateral>
+
+    <div class="contenido" [class.expandido]="!menuVisible">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="60"></mat-spinner>
+      </div>
+
+      <div class="contenedor-filtros mat-elevation-z2">
+        <div class="titulo-contenedor">
+          <h2 class="titulo-estilizado mat-title">Administradores</h2>
+        </div>
+
+        <div class="filtros-fondo" [class.expandido]="!menuVisible">
+          <div class="filtros">
+            <h3>Filtros de Búsqueda</h3>
+            <div class="filtros-contenido">
+              <!-- Primera fila -->
+              <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput [(ngModel)]="nombre" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Apellido</mat-label>
+                <input matInput [(ngModel)]="apellido" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput [(ngModel)]="email" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Teléfono</mat-label>
+                <input matInput [(ngModel)]="telefono" />
+              </mat-form-field>
+
+              <!-- Segunda fila -->
+             <mat-form-field appearance="fill">
+  <mat-label>Fecha Inicio</mat-label>
+  <input
+  #fechaInicioInput
+  matInput
+  [matDatepicker]="pickerInicio"
+  [(ngModel)]="fechaInicio"
+  name="fechaInicio"
+  #fechaInicioNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+  <mat-datepicker #pickerInicio></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Fecha Fin</mat-label>
+<input
+  #fechaFinInput
+  matInput
+  [matDatepicker]="pickerFin"
+  [(ngModel)]="fechaFin"
+  name="fechaFin"
+  #fechaFinNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+  <mat-datepicker #pickerFin></mat-datepicker>
+</mat-form-field>
+
+              <!-- Botones dentro del grid -->
+              <div
+                class="botones-filtros"
+                style="grid-column: span 2; justify-content: start"
+              >
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="aplicarFiltros(1)"
+                >
+                  Buscar
+                </button>
+
+                <button mat-raised-button color="accent" (click)="exportar()">
+                  Exportar
+                </button>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="limpiarFiltros()"
+                >
+                  Limpiar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor-boton-agregar">
+          <button mat-raised-button color="primary" (click)="abrirCrear()">
+            Agregar Administrador
+          </button>
+        </div>
+
+        <div class="tabla-fondo" [class.expandido]="!menuVisible">
+          <table mat-table [dataSource]="administradores" matSort>
+            <!-- Columna Nombre -->
+            <ng-container matColumnDef="administrador_nombres">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+              <td mat-cell *matCellDef="let admin">
+                {{ admin.administrador_nombres || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna Apellido -->
+            <ng-container matColumnDef="administrador_apellidos">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Apellido
+              </th>
+              <td mat-cell *matCellDef="let admin">
+                {{ admin.administrador_apellidos || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna Email -->
+            <ng-container matColumnDef="administrador_email">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+              <td mat-cell *matCellDef="let admin">
+                {{ admin.administrador_email || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna Teléfono -->
+            <ng-container matColumnDef="administrador_fono">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Teléfono
+              </th>
+              <td mat-cell *matCellDef="let admin">
+                {{ admin.administrador_fono || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna Fecha Registro -->
+            <ng-container matColumnDef="created_at">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Fecha Registro
+              </th>
+              <td mat-cell *matCellDef="let admin">
+                {{ admin.created_at | date : "dd-MM-yyyy" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna Acciones -->
+            <ng-container matColumnDef="acciones">
+              <th mat-header-cell *matHeaderCellDef>Acciones</th>
+              <td mat-cell *matCellDef="let admin">
+                <div class="acciones-botones">
+                  <button
+                    mat-icon-button
+                    matTooltip="Editar"
+                    (click)="abrirEdit(admin.administrador_id)"
+                  >
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button
+                    mat-icon-button
+                    matTooltip="Borrar"
+                    (click)="borrarAdministrador(admin.administrador_id)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </td>
+            </ng-container>
+
+            <!-- Header y filas -->
+            <thead>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            </thead>
+            <tbody>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </tbody>
+          </table>
+
+          <!-- Paginador de Angular Material -->
+          <mat-paginator
+            [length]="totalItems"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="[1, 5, 10, 20, 30]"
+            [showFirstLastButtons]="true"
+            (page)="onPageChange($event)"
+          >
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popup modal -->
+<div
+  *ngIf="mostrarPopup"
+  class="modal"
+  (pointerup)="onModalPointerUp($event)"
+>
+  <div
+    class="popup-container modal-edit-admin"
+    (pointerdown)="onInsidePointerDown($event)"
+    (click)="$event.stopPropagation()"
+  >
+    <h2 class="popup-header mat-title">
+      {{ modo === "crear" ? "Agregar Administrador" : "Editar Administrador" }}
+    </h2>
+
+    <div class="popup-content">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="40"></mat-spinner>
+      </div>
+
+      <form #adminForm="ngForm">
+        <div class="campos-edicion">
+          <mat-form-field appearance="fill" class="full-width input-claro">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              [required]="true"
+              [(ngModel)]="formularioEdit.nombres"
+              name="nombres"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Apellido</mat-label>
+            <input
+              matInput
+              [(ngModel)]="formularioEdit.apellidos"
+              name="apellidos"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input
+  matInput
+  type="email"
+  [(ngModel)]="formularioEdit.email"
+  name="email"
+  [required]="true"
+  autocomplete="off"
+  #emailInput="ngModel"
+  pattern=".+@.+"
+/>
+            <mat-error *ngIf="emailInput.invalid && emailInput.touched">
+              El correo es requerido y debe tener un formato válido.
+            </mat-error>
+            
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Teléfono</mat-label>
+            <input
+              matInput
+              [(ngModel)]="formularioEdit.telefono"
+              name="telefono"
+            />
+          </mat-form-field>
+
+          <!-- Campo Contraseña -->
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Contraseña</mat-label>
+            <input
+              matInput
+              [type]="mostrarPasswordEdit ? 'text' : 'password'"
+              [(ngModel)]="formularioEdit.contrasena"
+              name="contrasena"
+              [required]="modo === 'crear'"
+              autocomplete="new-password"
+              #passInput="ngModel"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="mostrarPasswordEdit = !mostrarPasswordEdit"
+              type="button"
+            >
+              <mat-icon>{{
+                mostrarPasswordEdit ? "visibility_off" : "visibility"
+              }}</mat-icon>
+            </button>
+            <mat-error
+              *ngIf="passInput.invalid && passInput.touched && modo === 'crear'"
+            >
+              La contraseña es requerida para crear un nuevo administrador.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+
+      <div class="popup-actions">
+        <button
+          mat-raised-button
+          color="warn"
+          [disabled]="cargando"
+          (click)="cerrarPopupEdit()"
+        >
+          Cancelar
+        </button>
+        <button mat-raised-button color="primary" 
+        [disabled]="cargando || adminForm.invalid" 
+        (click)="modo === 'crear' ? crearAdministrador() : editarAdministrador()">
+  {{ modo === "crear" ? "Crear" : "Actualizar" }}
+</button>
+      </div>
+    </div>
+  </div>
+</div>

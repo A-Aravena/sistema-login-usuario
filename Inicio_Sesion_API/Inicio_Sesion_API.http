@@ -1,0 +1,325 @@
+@Inicio_Sesion_API_HostAddress = http://localhost:5229
+
+
+########################################################
+########################################################
+
+            # PRUEBAS INICIO SESION #
+
+########################################################
+########################################################            
+
+### Prueba de inicio de sesión administrador
+POST {{Inicio_Sesion_API_HostAddress}}/inicio_sesion/administrador
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "AnaGomez@emach.cl",
+  "password": "NuevaClaveSegura123!"
+}
+
+
+### Prueba de inicio de sesión usuario
+POST {{Inicio_Sesion_API_HostAddress}}/inicio_sesion/usuario
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "JuanUser",
+  "password": "password123",
+  "sistema": "bioemach_autoconsulta"
+}
+
+########################################################
+########################################################
+
+            # PRUEBAS USUARIOS #
+
+########################################################
+######################################################## 
+
+
+### Prueba Obtener la lista de usuarios
+GET {{Inicio_Sesion_API_HostAddress}}/usuario?page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Content-Type: application/json
+Accept: application/json
+
+### Prueba Editar usuarios(solo administradores)
+PUT {{Inicio_Sesion_API_HostAddress}}/usuario/edit/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Content-Type: application/json
+Accept: application/json
+
+{
+  "usuario_username": "nuevo_usuario111",
+  "usuario_password": "ss",
+  "usuario_nombres": "Nuevo Nombre2",
+  "usuario_apellidos": "Nuevo Apellido115551",
+  "usuario_rut": "1234567890111",
+  "usuario_email": "nuevoemail@emach.cl",
+  "usuario_fono": "123456789111",
+  "usuario_url": "http://nuevoenlace.com",
+  "usuario_sistema": "sistema_ejemplo" 
+}
+
+### Prueba para filtrar Usuarios 
+GET {{Inicio_Sesion_API_HostAddress}}/usuario/filtrar?nombres=Juan&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+
+### Prueba para filtrar Usuarios Sin datos
+GET {{Inicio_Sesion_API_HostAddress}}/usuario/filtrar?&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+### Prueba para filtrar Usuarios por fechas
+GET {{Inicio_Sesion_API_HostAddress}}/usuario/filtrar?fechaInicio=2025-01-01&fechaFin=2025-12-31&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+### Prueba para eliminar Usuarios
+DELETE {{Inicio_Sesion_API_HostAddress}}/usuario/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+
+### Prueba para exportar usuarios a Excel
+GET {{Inicio_Sesion_API_HostAddress}}/usuario/exportar/usuarios?nombres=Juan&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+### Prueba para exportar usuarios a Excel sin datos
+GET {{Inicio_Sesion_API_HostAddress}}/usuario/exportar/usuarios?page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+
+### Prueba para exportar usuarios a Excel  por rango de fechas
+GET {{Inicio_Sesion_API_HostAddress}}/usuario/exportar/usuarios?fechaInicio=2025-01-01&fechaFin=2025-12-31&page=1&pageSize=10page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+
+
+
+
+########################################################
+########################################################
+
+            # PRUEBAS ADMINISTRADOR #
+
+########################################################
+######################################################## 
+
+
+
+
+### Prueba para obtener administradores
+GET {{Inicio_Sesion_API_HostAddress}}/administrador?page=3&pageSize=11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+### Prueba para editar administradores
+PUT {{Inicio_Sesion_API_HostAddress}}/administrador/edit/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Content-Type: application/json
+Accept: application/json
+
+{
+  "administrador_nombres": "Nuevo Nombre Adminaa",
+  "administrador_apellidos": "Nuevo Apellido Admin",
+  "administrador_email": "nuevoadmin@email.com",
+  "administrador_fono": "987654321"
+}
+
+### Prueba para filtrar Administradores
+GET {{Inicio_Sesion_API_HostAddress}}/administrador/filtrar?nombres=Juan&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+### Prueba para filtrar Administradores Sin datos
+GET {{Inicio_Sesion_API_HostAddress}}/administrador/filtrar?&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+### Prueba para filtrar Administrador por fechas
+GET {{Inicio_Sesion_API_HostAddress}}/administrador/filtrar?fechaInicio=2025-01-01&fechaFin=2025-12-31&page=1&pageSize=30
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+### Prueba para eliminar Administrador
+DELETE {{Inicio_Sesion_API_HostAddress}}/administrador/28
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+### Prueba para exportar Administrador a Excel
+GET {{Inicio_Sesion_API_HostAddress}}/administrador/exportar/administradores?nombres=Juan&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+### Prueba para agregar nuevo administrador
+POST {{Inicio_Sesion_API_HostAddress}}/administrador/crear-administrador
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+Content-Type: application/json
+
+{
+  "administrador_email": "admidsadasdan@ejemplo.com",
+  "administrador_password": "123456",
+  "administrador_nombres": "Juan",
+  "administrador_apellidos": "Pérez",
+  "administrador_fono": "123456789"
+}
+
+### Prueba para cerrar sesion a usuarios
+POST {{Inicio_Sesion_API_HostAddress}}/administrador/cerrar_sesion_user?usuarioId=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+
+### Prueba cerrar sesion admonistrador
+POST {{Inicio_Sesion_API_HostAddress}}/administrador/cerrar-sesion
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+########################################################
+########################################################
+
+            # PRUEBAS CONFIGURACIONES #
+
+########################################################
+######################################################## 
+
+### Prueba para cambiar la configuracion
+PUT {{Inicio_Sesion_API_HostAddress}}/configuracion/editar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Content-Type: application/json
+Accept: application/json
+
+{
+  "configuracion_log_enable": true,  
+  "configuracion_nivel_log_api": 1,  
+  "configuracion_tiempo_retencion": 15  
+}
+
+
+########################################################
+########################################################
+
+            # PRUEBAS DATOS LOG_API #
+
+########################################################
+######################################################## 
+
+### Prueba obtener datos log_api
+GET {{Inicio_Sesion_API_HostAddress}}/logs/log_api?page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+
+### Prueba para filtrar Log API
+GET {{Inicio_Sesion_API_HostAddress}}/logs/log_api_filtro?url=edit&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+### Prueba para exportar log_api
+GET {{Inicio_Sesion_API_HostAddress}}/logs/exportar/log_api?&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+### Prueba para borrar log_api
+DELETE {{Inicio_Sesion_API_HostAddress}}/logs/log_api/borrar
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+########################################################
+########################################################
+
+            # PRUEBAS DATOS LOG_SISTEMA #
+
+########################################################
+######################################################## 
+
+
+### Prueba obtener datos Log_sistema
+GET {{Inicio_Sesion_API_HostAddress}}/logs/log_sistema?page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+
+### Prueba para filtrar Log Sistema
+GET {{Inicio_Sesion_API_HostAddress}}/logs/log_sistema_filtro?accion=filtrar&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+
+### Prueba para exportar log_sistema
+GET {{Inicio_Sesion_API_HostAddress}}/logs/exportar/log_sistema?&page=1&pageSize=10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+
+########################################################
+########################################################
+
+            # PRUEBAS VALIDAR SESIONES #
+
+########################################################
+######################################################## 
+
+
+### Prueba para Validar sesiones
+GET {{Inicio_Sesion_API_HostAddress}}/sesiones/validar-token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJBbmFHb21lekBlbWFjaC5jbCIsImlkIjoiMyIsImp0aSI6IjI5Zjc3MTg5LTAzOWYtNGZhYS1iMzBjLTZhYjVhMTZkMzUyMiIsImV4cCI6MTc0MDE2NDE0MCwiaXNzIjoiTWlBcHBJc3N1ZXIiLCJhdWQiOiJNaUFwcEF1ZGllbmNlIn0.A6uEjxffRc1-4RR81Y171Q-c8UPxLvVCUPUxSTGPvxA
+Accept: application/json
+
+
+
+
+########################################################
+########################################################
+
+            # PRUEBAS RECUPERAR CONTRASEÑA #
+
+########################################################
+######################################################## 
+
+### Prueba para validar email
+
+POST {{Inicio_Sesion_API_HostAddress}}/recuperar/validar-email
+Content-Type: application/json
+
+{
+  "email": "a.aravenauv@gmail.com" 
+}
+
+
+### Prueba para validar codigo enviado
+POST {{Inicio_Sesion_API_HostAddress}}/recuperar/validar-codigo
+Content-Type: application/json
+
+{
+  "email": "AnaGomez@emach.cl",
+  "codigo_validacion": "NqyYR"
+}
+
+
+### Prueba para cambiar contraseña
+POST {{Inicio_Sesion_API_HostAddress}}/recuperar/cambiar-contrasena
+Content-Type: application/json
+
+{
+  "email": "AnaGomez@emach.cl",
+  "codigo_validacion": "XBQuF",
+  "nueva_contraseña": "NuevaClaveSegura123!"
+}
+
+
+
+
+
+
+###

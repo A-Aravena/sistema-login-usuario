@@ -1,0 +1,333 @@
+<div class="container">
+  <div class="main-layout">
+    <app-menu-lateral
+      (menuToggle)="onMenuToggle($event)"
+      [class.hidden]="!menuVisible"
+    ></app-menu-lateral>
+
+    <div class="contenido" [class.expandido]="!menuVisible">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="60"></mat-spinner>
+      </div>
+
+      <div class="contenedor-filtros mat-elevation-z2">
+        <div class="titulo-contenedor">
+          <h2 class="titulo-estilizado mat-title">Usuarios</h2>
+        </div>
+
+        <div class="filtros-fondo" [class.expandido]="!menuVisible">
+          <div class="filtros">
+            <h3>Filtros de Búsqueda</h3>
+            <div class="filtros-contenido">
+              <!-- Campos de filtro -->
+              <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput [(ngModel)]="nombre" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Apellido</mat-label>
+                <input matInput [(ngModel)]="apellido" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input matInput [(ngModel)]="usuario" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput [(ngModel)]="email" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Teléfono</mat-label>
+                <input matInput [(ngModel)]="telefono" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>URL</mat-label>
+                <input matInput [(ngModel)]="url" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Sistema</mat-label>
+                <input matInput [(ngModel)]="sistema" />
+              </mat-form-field>
+
+
+
+
+             <mat-form-field appearance="fill">
+  <mat-label>Fecha Inicio</mat-label>
+  <input
+  #fechaInicioInput
+  matInput
+  [matDatepicker]="pickerInicio"
+  [(ngModel)]="fechaInicio"
+  name="fechaInicio"
+  #fechaInicioNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+  <mat-datepicker #pickerInicio></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Fecha Fin</mat-label>
+<input
+  #fechaFinInput
+  matInput
+  [matDatepicker]="pickerFin"
+  [(ngModel)]="fechaFin"
+  name="fechaFin"
+  #fechaFinNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+  <mat-datepicker #pickerFin></mat-datepicker>
+</mat-form-field>
+
+
+
+              <div
+                class="botones-filtros"
+                style="grid-column: span 2; justify-content: start"
+              >
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="aplicarFiltros(1)"
+                >
+                  Buscar
+                </button>
+                <button mat-raised-button color="accent" (click)="exportar()">
+                  Exportar
+                </button>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="limpiarFiltros()"
+                >
+                  Limpiar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabla-fondo" [class.expandido]="!menuVisible">
+          <table mat-table [dataSource]="usuarios" matSort>
+            <!-- Nombre -->
+            <ng-container matColumnDef="usuario_nombres">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+              <td mat-cell *matCellDef="let usuario">
+                {{ usuario.usuario_nombres || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Apellido -->
+            <ng-container matColumnDef="usuario_apellidos">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Apellido
+              </th>
+              <td mat-cell *matCellDef="let usuario">
+                {{ usuario.usuario_apellidos || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Usuario -->
+            <ng-container matColumnDef="usuario_username">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Usuario</th>
+              <td mat-cell *matCellDef="let usuario">
+                {{ usuario.usuario_username || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Email -->
+            <ng-container matColumnDef="usuario_email">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+              <td mat-cell *matCellDef="let usuario">
+                {{ usuario.usuario_email || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Teléfono -->
+            <ng-container matColumnDef="usuario_fono">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Teléfono
+              </th>
+              <td mat-cell *matCellDef="let usuario">
+                {{ usuario.usuario_fono || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- URL -->
+            <ng-container matColumnDef="usuario_url">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>URL</th>
+              <td mat-cell *matCellDef="let usuario">
+                {{ usuario.usuario_url || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Fecha Registro -->
+            <ng-container matColumnDef="created_at">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Fecha Registro
+              </th>
+              <td mat-cell *matCellDef="let usuario">
+                {{ usuario.created_at | date : "dd-MM-yyyy" }}
+              </td>
+            </ng-container>
+
+            <!-- Sistema -->
+            <ng-container matColumnDef="sistema_nombre">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Sistema</th>
+              <td mat-cell *matCellDef="let usuario">
+                {{ usuario.sistema_nombre || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Acciones -->
+            <ng-container matColumnDef="acciones">
+              <th mat-header-cell *matHeaderCellDef>Acciones</th>
+              <td mat-cell *matCellDef="let usuario">
+                <button
+                  mat-icon-button
+                  matTooltip="Ver Sesiones"
+                  (click)="abrirPopup(usuario.usuario_id)"
+                >
+                  <mat-icon>visibility</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </div>
+
+        <!-- Paginación -->
+        <mat-paginator
+          [length]="totalItems"
+          [pageSize]="pageSize"
+          [pageSizeOptions]="[1, 5, 10, 20, 30]"
+          [showFirstLastButtons]="true"
+          (page)="onPageChange($event)"
+        >
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Popup modal -->
+<div *ngIf="mostrarPopup" class="modal" (pointerup)="onModalPointerUp($event)">
+  <div
+    class="popup-container modal-edit-admin"
+    (pointerdown)="onInsidePointerDown($event)"
+    (click)="$event.stopPropagation()"
+  >
+    <!-- Título -->
+    <h2 class="popup-header mat-title">Sesiones activas de usuario</h2>
+
+    <div class="popup-content">
+      <!-- Spinner -->
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="40"></mat-spinner>
+      </div>
+
+      <!-- Información usuario y botón cerrar todas -->
+      <div class="campos-edicion">
+        <div>
+          <strong>USUARIO:</strong> {{ usuarioNombre }} {{ usuarioApellido }}
+        </div>
+        <button
+          mat-raised-button
+          color="warn"
+          [disabled]="cargando || sesiones.length === 0"
+          (click)="cerrarTodasLasSesiones()"
+        >
+          Cerrar todas las sesiones
+        </button>
+      </div>
+      <!-- Tabla Angular Material -->
+      <table mat-table [dataSource]="sesiones" class="mat-elevation-z8" matSort>
+        <!-- IP -->
+        <ng-container matColumnDef="ip">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>IP</th>
+          <td mat-cell *matCellDef="let sesion">{{ sesion.ip }}</td>
+        </ng-container>
+
+        <!-- Creado -->
+        <ng-container matColumnDef="fechaCreacion">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Creado</th>
+          <td mat-cell *matCellDef="let sesion">
+            {{ sesion.fechaCreacion | date : "dd-MM-yyyy" }}
+          </td>
+        </ng-container>
+
+        <!-- Expira -->
+        <ng-container matColumnDef="fechaExpiracion">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Expira</th>
+          <td mat-cell *matCellDef="let sesion">
+            {{ sesion.fechaExpiracion | date : "dd-MM-yyyy" }}
+          </td>
+        </ng-container>
+
+        <!-- Días restantes -->
+        <ng-container matColumnDef="diasRestantes">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            Días restantes
+          </th>
+          <td mat-cell *matCellDef="let sesion">{{ sesion.diasRestantes }}</td>
+        </ng-container>
+
+        <!-- Acciones -->
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef>Acciones</th>
+          <td mat-cell *matCellDef="let sesion">
+            <button
+              mat-icon-button
+              color="warn"
+              [disabled]="cargando"
+              (click)="cerrarSesionIP(sesion.ip)"
+              matTooltip="Cerrar sesión"
+            >
+              <mat-icon>logout</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="modalDisplayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: modalDisplayedColumns"></tr>
+
+        <!-- Fila para cuando no hay sesiones -->
+        <tr *ngIf="!sesiones || sesiones.length === 0">
+          <td
+            [attr.colspan]="modalDisplayedColumns.length"
+            style="text-align: center; color: #888"
+          >
+            {{
+              mensajeSinSesiones ||
+                "No se encontraron sesiones activas para el usuario."
+            }}
+          </td>
+        </tr>
+      </table>
+
+      <!-- Botón cerrar -->
+      <div class="popup-actions" style="margin-top: 16px; text-align: right">
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="cargando"
+          (click)="cerrarPopup()"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

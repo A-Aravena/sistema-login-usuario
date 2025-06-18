@@ -1,0 +1,29 @@
+<!-- login.component.html -->
+<div class="validar-container">
+    <!-- Sección de la imagen -->
+    <div class="image-section">
+      <img src="assets/imagenes/login_fondo.jpg" alt="Imagen de inicio de sesión">
+    </div>
+  
+    <!-- Sección del formulario -->
+    <div class="validar-box">
+      <!-- Imagen del logo -->
+      <div class="logo-container">
+        <img src="assets/imagenes/logo-login.jpg" alt="Logo Emach Administración" class="logo">
+      </div>
+      <h1>Validar Codigo</h1>
+      <p class="subtitle">Ingrese código enviado a correo Electronico</p>
+      <form (ngSubmit)="validarCodigo()">
+        <div class="input-group">
+          <input type="text" id="codigo" name="codigo" [(ngModel)]="codigo" required placeholder=" ">
+          <label for="codigo">Codigo Validacion</label>
+        </div>
+
+        <div class="button-group">
+          <button type="submit">Validar Codigo</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  

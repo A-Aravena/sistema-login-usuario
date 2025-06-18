@@ -1,0 +1,327 @@
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/appsettings.Development.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/appsettings.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.staticwebassets.endpoints.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.exe
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.deps.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.runtimeconfig.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.pdb
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/BouncyCastle.Cryptography.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ClosedXML.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ClosedXML.Parser.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/DocumentFormat.OpenXml.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/DocumentFormat.OpenXml.Framework.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ExcelNumberFormat.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Google.Protobuf.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Humanizer.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/K4os.Compression.LZ4.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/K4os.Compression.LZ4.Streams.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/K4os.Hash.xxHash.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.OpenApi.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Mono.TextTemplating.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/MySql.Data.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/MySql.EntityFrameworkCore.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Newtonsoft.Json.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/RBush.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/SixLabors.Fonts.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.CodeDom.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.Convention.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.Hosting.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.Runtime.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.TypedParts.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.IO.Packaging.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Security.Permissions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Text.Json.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/System.Windows.Extensions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ZstdSharp.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/comerr64.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/gssapi64.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/k5sprt64.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/krb5_64.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/krbcc64.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win/lib/net8.0/System.Windows.Extensions.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.csproj.AssemblyReference.cache
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.AssemblyInfoInputs.cache
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.AssemblyInfo.cs
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.csproj.CoreCompileInputs.cache
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/scopedcss/bundle/Inicio_Sesion_API.styles.css
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets.build.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets.development.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.Inicio_Sesion_API.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.Inicio_Sesion_API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.build.Inicio_Sesion_API.props
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.Inicio_Sesion_API.props
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.Inicio_Sesion_API.props
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets.pack.json
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_S.EA63EEAD.Up2Date
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/refint/Inicio_Sesion_API.dll
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.pdb
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.genruntimeconfig.cache
+C:/Users/Desarrollo/OneDrive - emach.cl/Escritorio/Emach Web V2/Inicio_Sesion_API/obj/Debug/net9.0/ref/Inicio_Sesion_API.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/appsettings.Development.json
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/appsettings.json
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.staticwebassets.endpoints.json
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.deps.json
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.runtimeconfig.json
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Inicio_Sesion_API.pdb
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/BouncyCastle.Cryptography.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ClosedXML.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ClosedXML.Parser.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/DocumentFormat.OpenXml.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/DocumentFormat.OpenXml.Framework.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ExcelNumberFormat.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Google.Protobuf.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Humanizer.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/K4os.Compression.LZ4.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/K4os.Compression.LZ4.Streams.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/K4os.Hash.xxHash.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Mono.TextTemplating.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/MySql.Data.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/MySql.EntityFrameworkCore.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Newtonsoft.Json.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Npgsql.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/RBush.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/SixLabors.Fonts.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.CodeDom.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.Convention.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.Hosting.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.Runtime.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Composition.TypedParts.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.IO.Packaging.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Security.Permissions.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/System.Windows.Extensions.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ZstdSharp.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/comerr64.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/gssapi64.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/k5sprt64.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/krb5_64.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win-x64/native/krbcc64.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll
+/home/ubuntu/Inicio_Sesion_API/bin/Debug/net9.0/runtimes/win/lib/net8.0/System.Windows.Extensions.dll
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.csproj.AssemblyReference.cache
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.GeneratedMSBuildEditorConfig.editorconfig
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.AssemblyInfoInputs.cache
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.AssemblyInfo.cs
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.csproj.CoreCompileInputs.cache
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.MvcApplicationPartsAssemblyInfo.cs
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.MvcApplicationPartsAssemblyInfo.cache
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/scopedcss/bundle/Inicio_Sesion_API.styles.css
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets.build.json
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets.development.json
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.Inicio_Sesion_API.Microsoft.AspNetCore.StaticWebAssets.props
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.Inicio_Sesion_API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.build.Inicio_Sesion_API.props
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.Inicio_Sesion_API.props
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.Inicio_Sesion_API.props
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/staticwebassets.pack.json
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_S.EA63EEAD.Up2Date
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.dll
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/refint/Inicio_Sesion_API.dll
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.pdb
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/Inicio_Sesion_API.genruntimeconfig.cache
+/home/ubuntu/Inicio_Sesion_API/obj/Debug/net9.0/ref/Inicio_Sesion_API.dll

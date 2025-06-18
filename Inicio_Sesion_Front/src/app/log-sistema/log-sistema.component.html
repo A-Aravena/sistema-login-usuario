@@ -1,0 +1,162 @@
+<div class="container">
+  <div class="main-layout">
+    <app-menu-lateral
+      (menuToggle)="onMenuToggle($event)"
+      [class.hidden]="!menuVisible"
+    ></app-menu-lateral>
+
+    <div class="contenido" [class.expandido]="!menuVisible">
+      <div *ngIf="cargando" class="spinner-overlay">
+        <mat-spinner diameter="60"></mat-spinner>
+      </div>
+
+      <div class="contenedor-filtros mat-elevation-z2">
+        <div class="titulo-contenedor">
+          <div class="titulo-principal">Historial de Eventos</div>
+          <div class="subtitulo">Log Sistema</div>
+        </div>
+
+        <div class="filtros-fondo" [class.expandido]="!menuVisible">
+          <div class="filtros">
+            <h3>Filtros de Búsqueda</h3>
+            <div class="filtros-contenido">
+              <!-- Primera fila -->
+              <mat-form-field appearance="fill">
+                <mat-label>Accion</mat-label>
+                <input matInput [(ngModel)]="accion" />
+              </mat-form-field>
+
+             
+
+   
+
+              <mat-form-field appearance="fill">
+                <mat-label>Cambios Realizados</mat-label>
+                <input matInput [(ngModel)]="cambiosRealizado" />
+              </mat-form-field>
+
+              <!-- Segunda fila -->
+
+             <mat-form-field appearance="fill">
+  <mat-label>Fecha Inicio</mat-label>
+  <input
+  #fechaInicioInput
+  matInput
+  [matDatepicker]="pickerInicio"
+  [(ngModel)]="fechaInicio"
+  name="fechaInicio"
+  #fechaInicioNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+  <mat-datepicker #pickerInicio></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Fecha Fin</mat-label>
+<input
+  #fechaFinInput
+  matInput
+  [matDatepicker]="pickerFin"
+  [(ngModel)]="fechaFin"
+  name="fechaFin"
+  #fechaFinNgModel="ngModel"
+/>
+  <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+  <mat-datepicker #pickerFin></mat-datepicker>
+</mat-form-field>
+
+              <!-- Botones dentro del grid -->
+              <div
+                class="botones-filtros"
+                style="grid-column: span 1; justify-content: start"
+              >
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="aplicarFiltros(1)"
+                >
+                  Buscar
+                </button>
+
+                <button mat-raised-button color="accent" (click)="exportar()">
+                  Exportar
+                </button>
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="limpiarFiltros()"
+                >
+                  Limpiar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div class="tabla-fondo" [class.expandido]="!menuVisible">
+          <table mat-table [dataSource]="LogsApi" matSort>
+            <!-- Columna accion -->
+            <ng-container matColumnDef="log_sistema_accion">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Accion</th>
+              <td mat-cell *matCellDef="let logSistema">
+                {{ logSistema.log_sistema_accion || "-" }}
+              </td>
+            </ng-container>
+
+            <!-- Columna Fecha -->
+            <ng-container matColumnDef="log_sistema_fecha">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Fecha Registro
+              </th>
+              <td mat-cell *matCellDef="let logSistema">
+                {{ logSistema.log_sistema_fecha | date : "dd-MM-yyyy"}}
+              </td>
+            </ng-container>
+
+            <!-- Columna cambios Realizados -->
+            <ng-container matColumnDef="log_sistema_cambios_realizados">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Cambios Realizados
+              </th>
+              <td mat-cell *matCellDef="let logSistema">
+                {{ logSistema.log_sistema_cambios_realizados|| "-" }}
+              </td>
+            </ng-container>
+            <!-- Columna Responsable -->
+            <ng-container matColumnDef="responsable">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Responsable
+              </th>
+              <td mat-cell *matCellDef="let logSistema">
+                {{ logSistema.administrador?.nombre || "-" }}
+                {{ logSistema.administrador?.apellido || "" }}
+              </td>
+            </ng-container>
+
+
+
+            <!-- Header y filas -->
+            <thead>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            </thead>
+            <tbody>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </tbody>
+          </table>
+
+          <!-- Paginador de Angular Material -->
+          <mat-paginator
+            [length]="totalItems"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="[1, 5, 10, 20, 30]"
+            [showFirstLastButtons]="true"
+            (page)="onPageChange($event)"
+          >
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
